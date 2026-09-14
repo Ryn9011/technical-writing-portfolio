@@ -26,7 +26,7 @@ export function FeaturedWork() {
           <p className="text-xs font-semibold uppercase tracking-wide text-indigo-600">
             Technical documentation
           </p>
-          <h3 className="mt-2 text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">
+          <h3 className="mt-2 text-lg font-semibold tracking-tight text-slate-900 sm:text-xl">
             Docs written for engineers
           </h3>
           <p className="mt-3 text-sm leading-6 text-slate-600">
@@ -48,7 +48,7 @@ export function FeaturedWork() {
             <p className="text-xs font-semibold uppercase tracking-wide text-indigo-600">
               End-user documentation
             </p>
-            <h3 className="mt-2 text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">
+            <h3 className="mt-2 text-lg font-semibold tracking-tight text-slate-900 sm:text-xl">
               Guides written for users
             </h3>
             <p className="mt-3 text-sm leading-6 text-slate-600">
