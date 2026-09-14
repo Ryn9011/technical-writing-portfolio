@@ -19,7 +19,7 @@ export function SiteHeader() {
           <NavLink href="/" exact>
             Home
           </NavLink>
-          <NavLink href="/work">Work</NavLink>
+          <NavLink href="/work">Work</NavLink>        
           <NavLink href="/#about">About</NavLink>
           <NavLink href="/#contact">Contact</NavLink>
         </nav>

@@ -1,3 +1,9 @@
+"use client";
+
+import { useState } from "react";
+import Link from "next/link";
+import { Check, Copy, FileText } from "lucide-react";
+
 function GithubIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
@@ -35,13 +41,9 @@ function LinkedinIcon(props: React.SVGProps<SVGSVGElement>) {
   );
 }
 
+const EMAIL = "ryanjennings83@protonmail.com";
+
 const LINKS = [
-   {
-    label: "Email",
-    href: "mailto:ryanjennings83@protonmail.com",
-    handle: "ryanjennings83@protonmail.com",
-    icon: EmailIcon,
-  },
   {
     label: "LinkedIn",
     href: "https://www.linkedin.com/in/ryan-jennings-851816163/",
@@ -57,6 +59,18 @@ const LINKS = [
 ];
 
 export function Contact() {
+  const [copied, setCopied] = useState(false);
+
+  async function handleCopyEmail() {
+    try {
+      await navigator.clipboard.writeText(EMAIL);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch {
+      // Clipboard API unavailable; silently ignore.
+    }
+  }
+
   return (
     <section id="contact" className="scroll-mt-20 border-t border-slate-200">
       <div className="mx-auto max-w-[1440px] px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
@@ -72,6 +86,32 @@ export function Contact() {
         </div>
 
         <div className="mt-8 flex flex-wrap gap-4">
+          <Link
+            href="/cv"
+            className="inline-flex items-center gap-2.5 rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm font-medium text-slate-800 transition-colors hover:border-slate-300 hover:bg-slate-50"
+          >
+            <FileText className="h-4 w-4 text-slate-500" aria-hidden />
+            View CV
+          </Link>
+          <button
+            type="button"
+            onClick={handleCopyEmail}
+            className="inline-flex items-center gap-2.5 rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm font-medium text-slate-800 transition-colors hover:border-slate-300 hover:bg-slate-50"
+          >
+            <EmailIcon className="h-4 w-4 text-slate-500" aria-hidden />
+            <span>
+              Email
+              <span className="ml-1.5 text-slate-400">@{EMAIL}</span>
+            </span>
+            {copied ? (
+              <Check className="h-4 w-4 text-emerald-500" aria-hidden />
+            ) : (
+              <Copy className="h-4 w-4 text-slate-400" aria-hidden />
+            )}
+            <span className="sr-only" role="status">
+              {copied ? "Email address copied" : ""}
+            </span>
+          </button>
           {LINKS.map((link) => (
             <a
               key={link.label}

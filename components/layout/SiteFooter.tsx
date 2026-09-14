@@ -14,7 +14,7 @@ export function SiteFooter() {
           <nav aria-label="Footer" className="flex gap-6 text-sm">
             <Link href="/work" className="text-slate-500 hover:text-slate-900">
               Work
-            </Link>
+            </Link>   
             <Link href="/#about" className="text-slate-500 hover:text-slate-900">
               About
             </Link>
