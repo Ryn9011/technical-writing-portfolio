@@ -14,10 +14,6 @@ export default function CvPage() {
     <div className="mx-auto max-w-[1440px] px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
       <div className="flex flex-wrap items-center justify-between gap-4">
         <div>
-          <p className="text-xs font-semibold uppercase tracking-wide text-indigo-600">CV</p>
-          <h1 className="mt-2 text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
-            Ryan Jennings — CV
-          </h1>
         </div>
         <a
           href={`/${cvFile}`}
