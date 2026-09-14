@@ -32,7 +32,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="flex min-h-full flex-col bg-white text-slate-900">
         <SiteHeader />
         <main className="flex-1">{children}</main>
-        <SiteFooter />
+        {/* <SiteFooter /> */}
       </body>
     </html>
   );
