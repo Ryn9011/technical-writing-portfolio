@@ -49,7 +49,7 @@ export function FeaturedWork() {
               End-user documentation
             </p>
             <h3 className="mt-2 text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">
-              Guides written for customers
+              Guides written for users
             </h3>
             <p className="mt-3 text-sm leading-6 text-slate-600">
               Plain-language, task-focused guides written for the people using the product day to

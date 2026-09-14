@@ -34,7 +34,7 @@ export function About() {
             <p>
               That experience has given me a practical understanding of how software is designed,
               built and used. I can work from source code and implementation details through to the
-              documentation that developers, technical teams and customers actually need.
+              documentation that developers, technical teams and users actually need.
             </p>
 
             <p>

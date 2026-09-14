@@ -30,7 +30,7 @@ const ITEMS = [
   {
     icon: ListChecks,
     title: "User & Setup Guides",
-    description: "Task-focused, step-by-step guides that help customers configure and use software without needing to understand the underlying code.",
+    description: "Task-focused, step-by-step guides that help users configure and use software without needing to understand the underlying code.",
   },
 
   {
