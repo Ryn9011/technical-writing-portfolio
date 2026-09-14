@@ -22,6 +22,19 @@ export function FeaturedWork() {
           </div>
         </div>
 
+        <div className="mt-10 max-w-2xl">
+          <p className="text-xs font-semibold uppercase tracking-wide text-indigo-600">
+            Technical documentation
+          </p>
+          <h3 className="mt-2 text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">
+            Docs written for engineers
+          </h3>
+          <p className="mt-3 text-sm leading-6 text-slate-600">
+            In-depth references, architecture notes, and implementation guides written for the
+            engineers building and maintaining the product, rather than the people using it.
+          </p>
+        </div>
+
         <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
           {technicalProjects.map((project) => (
             <ProjectCard key={project.slug} project={project} />
@@ -35,9 +48,9 @@ export function FeaturedWork() {
             <p className="text-xs font-semibold uppercase tracking-wide text-indigo-600">
               End-user documentation
             </p>
-            <h2 className="mt-2 text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">
-              Guides written for customers, not engineers
-            </h2>
+            <h3 className="mt-2 text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">
+              Guides written for customers
+            </h3>
             <p className="mt-3 text-sm leading-6 text-slate-600">
               Plain-language, task-focused guides written for the people using the product day to
               day, rather than the engineers building it.
